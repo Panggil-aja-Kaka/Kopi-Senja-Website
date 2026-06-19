@@ -1,0 +1,235 @@
+/* =============== FONTS STYLE =============== */
+/* <--- Unbounded ---> */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+/* <--- Darling Coffee ---> */
+@font-face {
+  font-family: "Darling Coffee";
+  src: url('../font/darling-coffee.woff2') format('woff2');
+}
+
+/* =============== VARIABLE CSS =============== */
+:root {
+  --hue: 43; /* Krem Susu #F5ECD7 */
+
+  /* Background */
+  --body-color: hsl(43, 58%, 90%);        /* #F5ECD7 Krem Susu */
+  --container-color: hsl(43, 52%, 85%);   /* krem lebih gelap dikit buat card */
+  --container-color-light: hsl(43, 45%, 95%); /* hover card */
+
+  /* Main / Primary */
+  --first-color: hsl(7, 28%, 23%);        /* #4A2C2A Coklat Espresso */
+  --first-color-alt: hsl(7, 30%, 18%);    /* hover/dark */
+  --first-color-alt-2: hsl(7, 25%, 14%);  /* active/darker */
+  --first-color-light: hsl(7, 25%, 35%);  /* light/hover */
+
+  /* Text */
+  --title-color: hsl(0, 26%, 14%);        /* #2E1B1B Coklat Tua - Judul */
+  --text-color: hsl(7, 28%, 23%);         /* #4A2C2A Coklat Espresso - Utama */
+  --text-color-alt: hsl(7, 25%, 30%);     /* alternatif heading kecil */
+  --text-color-light: hsl(38, 33%, 64%);  /* #C4A882 Krem Gelap - muted */
+
+  /* Accent */
+  --sage: hsl(98, 14%, 55%);              /* Hijau Sage #8A9E7B */
+  --amber: hsl(34, 56%, 50%);             /* CTA Amber #C8833A */
+  --amber-dark: hsl(34, 56%, 42%);        /* CTA hover */
+  
+  /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Unbounded", sans-serif;
+    --second-font: "Darling Coffee", cursive;
+    --biggest-font-size: 2rem;
+    --bigger-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --bigger-font-size: 2rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    /* min-height: 2000px; */
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =============== NAVBAR =============== */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2rem;
+  background-color: hsla(43, 52%, 85%, .7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--first-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+}
+.nav__logo{
+ color: var(--title-color);
+ font-family: var(--second-font);
+ font-size: var(--h2-font-size);
+}
+.nav__list{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-link{
+  row-gap: 2rem;
+}
+
+
+
+/* <---- NAVIGASI TOGGLE ---> */
+.nav__toggle{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.5rem;
+  right: 0;
+  padding: .2rem;
+}
+/*=============== HERO SECTION ===============*/
+.hero__content{
+  padding: 2rem;
+  width: 50%;
+
+}
+
+.hero__section{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/sampul.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero__greeting{
+  margin-bottom: 1rem;
+}
+
+.hero__button{
+ background-color: tomato;
+ margin-top: 2rem;
+ padding: .5rem;
+ font-size: var(--h2-font-size)
+}
+
+
+.hero-btn{
+  background-color: red;
+  border: 1px solid var(--first-color);
+  border-radius: 20px;
+  padding: 1rem .5rem;
+  font-weight: var(--font-semi-bold)
+}
+
+
+
+/* //================== BREAKPOINT RESPONSIVE WEB ==================// */
+/* 1. Mobile devices (Default/Base styles usually go here) */
+
+
+/* 2. Tablets and small screens (601px to 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  
+}
+
+
+/* 3. Laptops and small desktops (769px to 1024px) */
+@media screen and (min-width: 769px) {
+  .nav__list{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .nav__toggle{
+    display: none;
+  }
+}
+
+
+
+/* 4. Large screens and desktops (1025px and up) */
+@media screen and (min-width: 1025px) {
+  
+}
