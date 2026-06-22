@@ -60,7 +60,7 @@ TESTIMONI
 1. Arini R.   ★★★★★
    "Tempatnya bikin betah banget, Cold Brew Aren-nya juara!"
 
-2. Dhika M.   ★★★★★
+2. <!-- //== 01 ==// -->   ★★★★★
    "Aesthetic abis, cocok buat WFC. WiFi kenceng juga."
 
 3. Sella T.   ★★★★

@@ -13,3 +13,17 @@ document.addEventListener('click', function (e) {
     navList.classList.remove('active')
   }
 });
+
+/*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/
+// Duplicate Image to Make the Animation Work
+  const tracks = document.querySelectorAll('.testimonials__content')
+  
+  tracks.forEach(track => {
+    const cards = [...track.children] //Spread to Make a Static Copy
+    
+    //Duplicate Cards Only Once
+    for (const card of cards) {
+      track.appendChild(card.cloneNode(true))
+    }
+  })
+  
